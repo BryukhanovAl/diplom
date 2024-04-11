@@ -62,7 +62,7 @@
 
 Создайте [HTTP router](https://cloud.yandex.com/docs/application-load-balancer/concepts/http-router). Путь укажите — /, backend group — созданную ранее.
 
-### Выполнение `htp-router`
+### Выполнение `http-router`
 
 ![http-router](scr/http-router.png)
 
