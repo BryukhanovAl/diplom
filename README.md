@@ -91,7 +91,7 @@
 
 ![Prometheus](scr/prometheus-node-exporter.png)
 
-- Помониторить можно [здесь](http://158.160.161.19:3000/d/rYdddlPWj/node-exporter-full?orgId=1&refresh=1m&from=now-15m&to=now&var-DS_PROMETHEUS=Prometheus&var-job=node&var-node=elasticsearch:9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B)
+- Помониторить можно [здесь](http://158.160.161.19:3000/d/rYdddlPWj/node-exporter-full?orgId=1&refresh=1m&from=now-15m&to=now&var-DS_PROMETHEUS=Prometheus&var-job=node&var-node=elasticsearch:9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B) Логин и пароль по умолчанию.
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
