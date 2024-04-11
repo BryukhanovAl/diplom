@@ -33,7 +33,7 @@
 
 Ознакомьтесь со всеми пунктами из этой секции, не беритесь сразу выполнять задание, не дочитав до конца. Пункты взаимосвязаны и могут влиять друг на друга.
 
-### Исползование `Terraform` и `Ansible`
+### Использование `Terraform` и `Ansible`
 
 ![terraform](scr/inst-terraform.png)
 ![ansible](scr/ansible-ping.png)
@@ -87,9 +87,11 @@
 
 ### Выполнение мониторинга
 
-- В моём случае я развернул систему на связки `Prometheus` и `Grafana`.Результат следующий:
+- В моём случае я развернул систему на связке `Prometheus` и `Grafana`.Результат следующий:
 
 ![Prometheus](scr/prometheus-node-exporter.png)
+
+- Помониторить можно [здесь](http://158.160.161.19:3000/d/rYdddlPWj/node-exporter-full?orgId=1&refresh=1m&from=now-15m&to=now&var-DS_PROMETHEUS=Prometheus&var-job=node&var-node=elasticsearch:9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B)
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
@@ -99,6 +101,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ### Логи с серверов через `elasticserch` в `kibana`
 
 ![kibana](scr/kibana-logs.png)
+
+ - Посмотреть логи можно [здесь](http://158.160.157.255:5601/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(),filters:!(),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc))))
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
@@ -115,7 +119,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![snapshots](scr/snapshots.png)
 ![time](scr/snap2.png)
 
-### Обзор олачного построения
+### Обзор облачного построения
 
 ![](scr/disc-vm-ya.png)
 ![](scr/http-router1.png)
@@ -128,7 +132,5 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![](scr/zone-vpc-1.png)
 ![](scr/zone-vpc.png)
 ![](scr/zone-ya.png)
-![]()
 
 
-# diplom
