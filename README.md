@@ -91,7 +91,7 @@
 
 ![Prometheus](scr/prometheus-node-exporter.png)
 
-- Помониторить можно [здесь](http://158.160.161.19:3000/d/rYdddlPWj/node-exporter-full?orgId=1&refresh=1m&from=now-15m&to=now&var-DS_PROMETHEUS=Prometheus&var-job=node&var-node=elasticsearch:9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B) Логин и пароль по умолчанию.
+- Помониторить можно [здесь](http://158.160.148.71:3000/d/rYdddlPWj/node-exporter-full?orgId=1&refresh=1m&var-DS_PROMETHEUS=Prometheus&var-job=node&var-node=web-server1:9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B&from=now-2d&to=now) Логин и пароль по умолчанию.
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
@@ -102,7 +102,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ![kibana](scr/kibana-logs.png)
 
- - Посмотреть логи можно [здесь](http://158.160.157.255:5601/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(),filters:!(),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc))))
+ - Посмотреть логи можно [здесь](http://158.160.145.100:5601/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(),filters:!(),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc))))
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
