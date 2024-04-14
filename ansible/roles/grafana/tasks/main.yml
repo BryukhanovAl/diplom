@@ -38,7 +38,7 @@
   community.grafana.grafana_dashboard:
     grafana_url: "http://{{ hostvars['grafana-host'].ansible_host }}:3000"
     grafana_user: "admin"
-    grafana_password: "admin"
+    grafana_password: "{{ pass }}"
     state: present
     commit_message: Updated by ansible
     overwrite: yes
@@ -49,7 +49,7 @@
   community.grafana.grafana_dashboard:
     grafana_url: "http://{{ hostvars['grafana-host'].ansible_host }}:3000"
     grafana_user: "admin"
-    grafana_password: "admin"
+    grafana_password: "{{ pass }}"
     state: present
     commit_message: Updated by ansible
     overwrite: yes
